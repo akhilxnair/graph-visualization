@@ -77,3 +77,7 @@
 .react-flow__handle:hover {
   background-color: #3b82f6;
 }
+
+.react-flow__controls-button {
+  background-color: black !important;
+}

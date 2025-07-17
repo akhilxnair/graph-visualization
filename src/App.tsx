@@ -8,7 +8,7 @@ import Graph from './components/Graph';
 import { sampleData } from './data/sampleData';
 
 const App = () => (
-  <div className="w-screen h-screen bg-gray-100">
+  <div className="w-full h-full bg-gray-100">
     <header className="bg-blue-600 text-white p-4">
       <h1 className="text-2xl font-bold">Cloud Security Visualization</h1>
     </header>

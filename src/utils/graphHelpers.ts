@@ -8,6 +8,7 @@ import type { NodeData } from '../types/graph';
  * @param nodes List of all nodes
  * @returns Array of descendant node IDs
  */
+
 export const getDescendantNodeIds = (nodeId: string, nodes: NodeData[]): string[] => {
   const node = nodes.find((n) => n.id === nodeId);
   if (!node || !node.children || node.children.length === 0) {
