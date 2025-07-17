@@ -59,11 +59,20 @@
   stroke: #b1b1b7;
   stroke-width: 2;
   cursor: pointer;
+  stroke-dasharray: 5;
+  animation: dashdraw 30s linear infinite;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .react-flow__edge.selected .react-flow__edge-path {
   stroke: #3b82f6;
   stroke-width: 3;
+  animation: dashdraw 15s linear infinite;
+}
+
+/* Node animation styles */
+.react-flow__node {
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Handle styles */
