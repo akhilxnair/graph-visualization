@@ -68,3 +68,9 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }
+
+.react-flow__node-default {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}

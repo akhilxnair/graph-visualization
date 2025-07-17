@@ -40,3 +40,40 @@
 .read-the-docs {
   color: #888;
 }
+/* Animation for connection lines */
+@keyframes dashdraw {
+  from {
+    stroke-dashoffset: 10;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.animated {
+  animation: dashdraw 0.5s linear infinite;
+}
+
+/* Custom edge styles */
+.react-flow__edge-path {
+  stroke: #b1b1b7;
+  stroke-width: 2;
+  cursor: pointer;
+}
+
+.react-flow__edge.selected .react-flow__edge-path {
+  stroke: #3b82f6;
+  stroke-width: 3;
+}
+
+/* Handle styles */
+.react-flow__handle {
+  width: 8px;
+  height: 8px;
+  background-color: #64748b;
+  border: 2px solid white;
+}
+
+.react-flow__handle:hover {
+  background-color: #3b82f6;
+}

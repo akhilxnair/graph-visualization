@@ -1,9 +1,10 @@
 // Import Modules
-import React from 'react';
+import React, { useCallback } from 'react';
 import { ReactFlow, Background, Controls, MiniMap } from '@xyflow/react';
 
 // Import Types
 import type { GraphData } from '../types/graph';
+import type { Connection } from '@xyflow/react';
 
 // Import Styles
 import '@xyflow/react/dist/style.css';
@@ -13,6 +14,7 @@ import { useGraphData } from '../hooks/useGraphData';
 
 // Import Components
 import CustomNode from './CustomNode';
+import ConnectionLine from './ConnectionLine';
 
 interface GraphProps {
   data: GraphData;
@@ -22,7 +24,7 @@ interface GraphProps {
 const Graph: React.FC<GraphProps> = ({ data }) => {
   // Use our custom hook to transform data
   const { nodes, edges, handleNodeClick } = useGraphData(data);
-  // console.log(nodes)
+
   // Define node types mapping
   const nodeTypes = {
     default: CustomNode,
@@ -35,6 +37,7 @@ const Graph: React.FC<GraphProps> = ({ data }) => {
         edges={edges}
         onNodeClick={handleNodeClick}
         nodeTypes={nodeTypes}
+        connectionLineComponent={ConnectionLine}
         fitView
       >
         <Background />
