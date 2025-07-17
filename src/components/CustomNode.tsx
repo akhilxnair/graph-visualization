@@ -108,8 +108,8 @@ const CustomNode: React.FC<CustomNodeProps> = ({ data, isConnectable }) => {
 
       {/* Node Circle */}
       <div
-        className={`${size} rounded-full ${bgColor} ${data.children ? `ring-4 border-4 border-white-200 ${ringColor}` : ''
-          } shadow-lg flex items-center justify-center relative`}
+        className={
+          `rounded-full shadow-lg flex items-center justify-center relative ${size} ${bgColor} ${data.children ? `ring-4 border-4 border-white-200 ${ringColor}` : ''} `}
       >
         <Handle
           type="target"
